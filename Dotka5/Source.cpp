@@ -7,11 +7,11 @@ int main()
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
 	int a, b, n;
-	cout << "ââåäèòå a:";
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ a:";
 	cin >> a;
-		cout << "ââåäèòå b:";
+		cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ b:";
 		cin >> b;
-	cout << "ââåäèòå ðàçìåð ìàññèâà n:"<<endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° n:"<<endl;
 	cin >> n;
 	int* arr = new int[n];
 	for (int i = 0; i < n; i++)
