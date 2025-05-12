@@ -7,11 +7,11 @@ int main()
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
 	int a, b, n;
-	cout << "РІРІРµРґРёС‚Рµ a:";
+	cout << "enter a:";
 	cin >> a;
-		cout << "РІРІРµРґРёС‚Рµ b:";
+		cout << "enter b:";
 		cin >> b;
-	cout << "РІРІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° n:"<<endl;
+	cout << "enter array size n:"<<endl;
 	cin >> n;
 	int* arr = new int[n];
 	for (int i = 0; i < n; i++)
@@ -34,8 +34,30 @@ int main()
 	{
 		if (arr[i] > arr[index_of_min])index_of_min = i;
 	}
-	cout << "наибольший элемент равен" << arr[index_of_max] << "и находится на" << index_of_min + 1 << "позиции" << endl;
-	cout << "наименьший элемент равен" << arr[index_of_min] << "и находится на" << index_of_min + 1 << "позиции" << endl;
+	cout << " the greatest element is equal to " << arr[index_of_max] << " and is located on " << index_of_min + 1 << "positions" << endl;
+	cout << " the smallest element is " << arr[index_of_min] << " and is located on " << index_of_min + 1 << "positions" << endl;
+
+
+
+
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[i]) swap(arr[i], arr[j]);
+		}
+	}
+
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] > arr[i]) swap(arr[i], arr[j]);
+		}
+	}
+
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
 
 	delete[]arr;
 
